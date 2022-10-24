@@ -1,0 +1,177 @@
+[
+  {
+    "POKEMON": {
+      "LUCARIO": {
+        "id": 448,
+        "name": "Lucario",
+        "life": 60,
+        "atk_stuff": {
+          "0": "Aurasphere",
+          "1": "GriffeAcier"
+        },
+        "type": {
+          "aggreg": {
+            "0": "Combat",
+            "1": "Acier"
+          },
+          "minor_res_type": {
+            "0": "Psy",
+            "1": "Vol",
+            "2": "Fee",
+            "3": "Electrik"
+          },
+          "major_res_type": {
+            "0": "Insecte",
+            "1": "Roche",
+            "2": "Tenebres"
+          },
+          "major_atk_type": {
+            "0": "Glace",
+            "1": "Normal",
+            "2": "Roche",
+            "3": "Acier",
+            "4": "Tenebres"
+          },
+          "minor_atk_type": {
+            "0": "Insecte",
+            "1": "Poison",
+            "2": "Psy",
+            "3": "Vol",
+            "4": "Fee"
+          },
+          "useless_atk_type": {
+            "0": "Spectre"
+          }
+        }
+      },
+      "PIKACHU": {
+        "id": 25,
+        "name": "Pikachu",
+        "life": 60,
+        "atk_stuff": {
+          "0": "Eclair",
+          "1": "ViveAttaque"
+        },
+        "type": {
+          "aggreg": {
+            "0": "Electrik"
+          },
+          "minor_res_type": {
+            "0": "Sol"
+          },
+          "major_res_type": {
+            "0": "Electrik",
+            "1": "Vol",
+            "2": "Acier"
+          },
+          "major_atk_type": {
+            "0": "Eau",
+            "1": "Vol"
+          },
+          "minor_atk_type": {
+            "0": "Dragon",
+            "1": "Electrik",
+            "2": "Plante"
+          },
+          "useless_atk_type": {
+            "0": "Sol"
+          }
+        }
+      }
+    },
+    "ATK_STUFF": {
+      "Aurasphere": {
+        "name": "Aurasphere",
+        "dmg": 20,
+        "type": "Combat"
+      },
+      "GriffeAcier": {
+        "name": "Griffe Acier",
+        "dmg": 20,
+        "type": "Acier"
+      },
+      "Eclair": {
+        "name": "Eclair",
+        "dmg": 20,
+        "type": "Electrik"
+      },
+      "ViveAttaque": {
+        "name": "Vive Attaque",
+        "dmg": 20,
+        "type": "Normal"
+      }
+    },
+    "TYPE_STUFF": {
+      "Combat": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Combat"
+      },
+      "Acier": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Acier"
+      },
+      "Psy": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Psy"
+      },
+      "Vol": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Vol"
+      },
+      "Fee": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Fée"
+      },
+      "Insecte": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Insecte"
+      },
+      "Roche": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Roche"
+      },
+      "Tenebres": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Ténèbres"
+      },
+      "Glace": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Glace"
+      },
+      "Normal": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Normal"
+      },
+      "Electrik": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Electrik"
+      },
+      "Dragon": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Dragon"
+      },
+      "Eau": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Eau"
+      },
+      "Plante": {
+        "marg_minus": 10,
+        "marg_malus": 10,
+        "name": "Plante"
+      }
+    }
+  }
+]
