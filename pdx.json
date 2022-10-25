@@ -44,6 +44,49 @@
           }
         }
       },
+      "ROUCOOL": {
+        "id": 16,
+        "name": "Roucool",
+        "life": 60,
+        "atk_stuff": {
+          "0": "AileDacier",
+          "1": "Charge"
+        },
+        "type": {
+          "aggreg": {
+            "0": "Combat",
+            "1": "Acier"
+          },
+          "minor_res_type": {
+            "0": "Psy",
+            "1": "Vol",
+            "2": "Fee",
+            "3": "Electrik"
+          },
+          "major_res_type": {
+            "0": "Insecte",
+            "1": "Roche",
+            "2": "Tenebres"
+          },
+          "major_atk_type": {
+            "0": "Glace",
+            "1": "Normal",
+            "2": "Roche",
+            "3": "Acier",
+            "4": "Tenebres"
+          },
+          "minor_atk_type": {
+            "0": "Insecte",
+            "1": "Poison",
+            "2": "Psy",
+            "3": "Vol",
+            "4": "Fee"
+          },
+          "useless_atk_type": {
+            "0": "Spectre"
+          }
+        }
+      },
       "PIKACHU": {
         "id": 25,
         "name": "Pikachu",
@@ -94,6 +137,16 @@
         "name": "Eclair",
         "dmg": 20,
         "type": "Electrik"
+      },
+      "AileDacier": {
+        "name": "AileDacier",
+        "dmg": 20,
+        "type": "Acier"
+      },
+      "Charge": {
+        "name": "Charge",
+        "dmg": 20,
+        "type": "Normal"
       },
       "ViveAttaque": {
         "name": "Vive Attaque",

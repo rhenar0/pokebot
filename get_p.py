@@ -1,4 +1,5 @@
 import json
+import random
 
 def check_pokemon(u_pokemon):
     with open('pdx.json') as json_file:
@@ -107,3 +108,29 @@ def get_pokemon_id(u_pokemon):
         if u_pokemon == pokemon[key]["name"]:
             return pokemon[key]["id"]
             
+def get_random_pokemon():
+    l_pokemon = ""
+    with open('pdx.json') as json_file:
+        data = json.load(json_file)
+    
+    pokemon = data[0]["POKEMON"]
+    for key in pokemon:
+        l_poke = pokemon[key]["name"]
+        l_pokemon += l_poke + " | "
+    l_pokemon = l_pokemon.split(" | ")
+    return l_pokemon[random.randint(0, len(l_pokemon) - 1)]
+
+def get_pokemon_random_atk(u_pokemon):
+    l_pokemon = ""
+    with open('pdx.json') as json_file:
+        data = json.load(json_file)
+    
+    pokemon = data[0]["POKEMON"]
+    atk = data[0]["ATK_STUFF"]
+    for key in pokemon:
+        l_poke = pokemon[key]["name"]
+        if l_poke == u_pokemon:
+            for keyt in pokemon[key]["atk_stuff"]:
+                l_pokemon += pokemon[key]["atk_stuff"][keyt] + " | "
+            l_pokemon = l_pokemon.split(" | ")
+            return l_pokemon[random.randint(0, len(l_pokemon) - 1)]

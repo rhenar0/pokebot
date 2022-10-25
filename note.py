@@ -51,3 +51,30 @@ async def on_message(message):
                 db.db_update_player_life(conn, discord_user, db.db_get_life(conn, discord_user) - pok.get_pokemon_attack(db.db_get_pokemon(conn, ctx.author.id)))
                 db.db_update_player_timewait(conn, ctx.author.id, datetime.now())
                 await ctx.send('Attaque!')
+
+
+    if ctx.author.bot:
+        return
+    if pok.check_pokemon(pokemon):
+        if db.db_check_player(conn, ctx.author.id):
+            if db.db_get_pokemon_ko(conn, ctx.author.id)[0] == "NO":
+                if db.db_get_time(conn, ctx.author.id)[0] < datetime.now():
+                    if db.db_get_pokemon(conn, ctx.author.id)[0] == "Pikachu":
+                        await ctx.send("Pikachu ne peut pas attaquer le Pokémon sauvage !")
+                    else:
+                        db.db_update_time(conn, ctx.author.id, datetime.now() + timedelta(minutes=1))
+                        db.db_update_life(conn, ctx.author.id, db.db_get_life(conn, ctx.author.id)[0] - pok.get_pokemon_damage(pokemon))
+                        if db.db_get_life(conn, ctx.author.id)[0] <= 0:
+                            db.db_update_pokemon_ko(conn, ctx.author.id, "YES")
+                            db.db_update_life(conn, ctx.author.id, 0)
+                            await ctx.send("Votre Pokémon est KO !")
+                        else:
+                            await ctx.send("Vous venez d'attaquer le Pokémon sauvage !")
+                else:
+                    await ctx.send("Vous devez attendre avant de pouvoir attaquer à nouveau !")
+            else:
+                await ctx.send("Votre Pokémon est KO !")
+        else:
+            await ctx.send("Vous devez rejoindre le combat !")
+    else:
+        await ctx.send("Vous devez saisir un Pokémon présent dans la liste ! Utilisez la commande ?listepokemon pour voir la liste des Pokémons !")
